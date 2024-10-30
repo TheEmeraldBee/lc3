@@ -1,0 +1,23 @@
+[package]
+name = "lc3"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [ "crates/*" ]
+package.authors = [ "Brighton (TheEmeraldBee) Cox" ]
+package.edition = "2021"
+resolver = "2"
+
+[workspace.dependencies]
+byteorder = "1.5.0"
+thiserror = "1.0.65"
+
+# Members
+common = { path = "crates/common" }
+
+[dependencies]
+byteorder.workspace = true
+thiserror.workspace = true
+
+common.workspace = true
